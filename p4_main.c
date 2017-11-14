@@ -13,6 +13,7 @@
 #include "potentiometer.h"
 #include <RTL.h>
 #include "bitmaps.h"
+#include "shapeController.h"
 
 
 /*
@@ -98,6 +99,7 @@ void initializeGameBoard(void) {
 }
 
 int main(void) {
+	spawnShape();
 	initializeGameBoard();
 	potentiometer_setup();
 	joystick_setup();
