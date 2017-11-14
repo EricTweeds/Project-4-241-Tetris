@@ -1,0 +1,5 @@
+--cpu Cortex-M3 "startup_lpc17xx.o" "bitmaps.o" "ece_spi.o" "glcd_scroll.o" "glcd_spi_lpc1700.o" "joystick.o" "led.o" "mpu9250.o" "p4_main.o" "potentiometer.o" "retarget.o" "rtx_config.o" "sensor_fusion.o" "timer.o" "uart.o" "shapecontroller.o" "system_lpc17xx.o" 
+--library_type=microlib --strict --scatter "Project4e.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Project4e.map" -o Project4e.axf

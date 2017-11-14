@@ -44,7 +44,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\</OutputDirectory>
-          <OutputName>Project4</OutputName>
+          <OutputName>Project4e</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -117,7 +117,7 @@
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
           <Simulator>
-            <UseSimulator>0</UseSimulator>
+            <UseSimulator>1</UseSimulator>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
             <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
@@ -128,7 +128,7 @@
             <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
           </Simulator>
           <Target>
-            <UseTarget>1</UseTarget>
+            <UseTarget>0</UseTarget>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
             <RunToMain>0</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
@@ -139,7 +139,7 @@
             <RestoreTracepoints>1</RestoreTracepoints>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>1</TargetSelection>
+          <TargetSelection>0</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -200,7 +200,7 @@
             <GenPPlst>0</GenPPlst>
             <AdsCpuType>"Cortex-M3"</AdsCpuType>
             <RvctDeviceName></RvctDeviceName>
-            <mOS>1</mOS>
+            <mOS>0</mOS>
             <uocRom>0</uocRom>
             <uocRam>0</uocRam>
             <hadIROM>1</hadIROM>
@@ -348,7 +348,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>__RTGT_UART</Define>
+              <Define></Define>
               <Undefine></Undefine>
               <IncludePath></IncludePath>
             </VariousControls>
@@ -399,8 +399,13 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Source Code</GroupName>
+          <GroupName>source code</GroupName>
           <Files>
+            <File>
+              <FileName>bitmaps.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\bitmaps.c</FilePath>
+            </File>
             <File>
               <FileName>ece_spi.c</FileName>
               <FileType>1</FileType>
@@ -430,6 +435,11 @@
               <FileName>MPU9250.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\MPU9250.c</FilePath>
+            </File>
+            <File>
+              <FileName>p4_main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\p4_main.c</FilePath>
             </File>
             <File>
               <FileName>potentiometer.c</FileName>
@@ -462,24 +472,19 @@
               <FilePath>.\uart.c</FilePath>
             </File>
             <File>
-              <FileName>p4_main.c</FileName>
+              <FileName>shapeController.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\p4_main.c</FilePath>
-            </File>
-            <File>
-              <FileName>bitmaps.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\bitmaps.c</FilePath>
+              <FilePath>.\shapeController.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Other</GroupName>
+          <GroupName>other</GroupName>
           <Files>
             <File>
               <FileName>system_LPC17xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>C:\Software\Keil\ARM\Startup\NXP\LPC17xx\system_LPC17xx.c</FilePath>
+              <FilePath>C:\software\Keil\ARM\Startup\NXP\LPC17xx\system_LPC17xx.c</FilePath>
             </File>
           </Files>
         </Group>
