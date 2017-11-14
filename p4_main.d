@@ -16,3 +16,5 @@ p4_main.o: potentiometer.h
 p4_main.o: c:\Software\Keil\ARM\RV31\INC\RTL.h
 p4_main.o: bitmaps.h
 p4_main.o: shapeController.h
+p4_main.o: c:\Software\Keil\ARM\ARMCC\bin\..\include\math.h
+

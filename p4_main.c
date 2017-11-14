@@ -15,6 +15,12 @@
 #include "bitmaps.h"
 #include "shapeController.h"
 
+=======
+#include <math.h>
+//globals
+uint32_t newPot =0;
+uint32_t oldPot =0;
+
 
 /*
 unsigned short rotateShape(unsigned short shape[]) {
@@ -35,28 +41,32 @@ __task void readPeripherals(void) {
 	uint32_t newPot=potentiometer_read();
 
 	//joystick read
-	uint32_t val=joystick_read();
+	uint32_t jstick=joystick_read();
 	unsigned char *direction = "NO DIR";
 	unsigned char *pushed = "Not Pressed";
-	if ((val & (1<<23)) == 0) {
-		direction="UP";
+	if ((jstick &(1<<3))== (1<<3)) {
+		//8
+		direction="left";
 	}
-	if ((val & (1<<24)) == 0) {
+	if ((jstick &(1<<5))== (1<<5)) {
+		//32
 		direction="RIGHT";
 	}
-	if ((val & (1<<25)) == 0) {
+	if ((jstick &(1<<6))== (1<<6)) {
+		//64
 		direction="DOWN";
 	}
-	if ((val & (1<<26)) == 0) {
-		direction="LEFT";
+	if ((jstick &(1<<4))== (1<<4)) {
+		//16
+		direction="up";
 	}
-	if ((val & (1<<20)) == 0) {
-		pushed = "Pressed";
+	if ((jstick &(1<<0))== (1<<0)) {
+		pushed ="pushed";
 	}
 	
 	//Push button read
-	uint32_t val = LPC_GPIO2->FIOPIN;
-	if ((val & (1<<10)) == 0){
+	uint32_t pbutton = LPC_GPIO2->FIOPIN;
+	if ((pbutton & (1<<10)) == 0){
 	//drop block
 	}
 }
@@ -99,12 +109,21 @@ void initializeGameBoard(void) {
 }
 
 int main(void) {
-	spawnShape();
-	initializeGameBoard();
+	LED_setup();
+	LED_display(3);
+	printf(" \n");
+	//joystick_setup();
 	potentiometer_setup();
-	joystick_setup();
-	LED_setup();							
+	while(1){
+	newPot=potentiometer_read();
+	if(newPot-oldPot>100){
+		printf("%x \n",newPot);
+		}
+	oldPot=newPot;
+	}
+	
+	//initializeGameBoard(); 
 	//os_sys_init(start_tasks);
-	 
-	while(1);
+	//while(1);
+	
 }
