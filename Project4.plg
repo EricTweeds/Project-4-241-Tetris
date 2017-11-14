@@ -4,10 +4,12 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 N:\MTE241\Project4\Project4.uvproj
-Project File Date:  11/13/2017
+Project File Date:  11/14/2017
 
 <h2>Output:</h2>
-Build target 'Target 1'
+Clean started: Project: 'Project4'
+   deleting intermediate output files for target 'Target 1'
+Rebuild target 'Target 1'
 assembling startup_LPC17xx.s...
 compiling ece_spi.c...
 compiling GLCD_Scroll.c...
@@ -16,40 +18,55 @@ compiling joystick.c...
 compiling led.c...
 compiling MPU9250.c...
 compiling potentiometer.c...
+potentiometer.c(23): warning:  #940-D: missing return statement at end of non-void function "potentiometer_read"
 compiling Retarget.c...
 compiling RTX_config.c...
 compiling sensor_fusion.c...
 compiling timer.c...
 compiling uart.c...
 compiling p4_main.c...
-p4_main.c(21): error:  #40: expected an identifier
-p4_main.c(21): error:  #65: expected a ";"
-p4_main.c(64): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+compiling bitmaps.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
 compiling system_LPC17xx.c...
+linking...
+Program Size: Code=6402 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 3 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(125): error:  #29: expected an expression
+p4_main.c(132): warning:  #12-D: parsing restarts here after previous syntax error
+p4_main.c(132): error:  #65: expected a ";"
+p4_main.c(108): warning:  #550-D: variable "direction" was set but never used
+p4_main.c(109): warning:  #177-D: variable "pushed" was declared but never referenced
+p4_main.c(132): error: At end of source:  #67: expected a "}"
 Target not created
 Build target 'Target 1'
 compiling p4_main.c...
-p4_main.c(23): warning:  #940-D: missing return statement at end of non-void function "rotateShape"
-p4_main.c(48): error:  #268: declaration may not appear after executable statement in block
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(125): error:  #29: expected an expression
+p4_main.c(128): warning:  #12-D: parsing restarts here after previous syntax error
+p4_main.c(108): warning:  #550-D: variable "direction" was set but never used
+p4_main.c(109): warning:  #177-D: variable "pushed" was declared but never referenced
 Target not created
 Build target 'Target 1'
 compiling p4_main.c...
-p4_main.c(23): warning:  #940-D: missing return statement at end of non-void function "rotateShape"
-linking...
-Project4.axf: Error: L6218E: Undefined symbol rt_tsk_pass (referred from potentiometer.o).
-Project4.axf: Error: L6218E: Undefined symbol rt_tsk_create (referred from p4_main.o).
-Project4.axf: Error: L6218E: Undefined symbol rt_tsk_delete (referred from p4_main.o).
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(125): error:  #29: expected an expression
+p4_main.c(128): warning:  #12-D: parsing restarts here after previous syntax error
+p4_main.c(108): warning:  #550-D: variable "direction" was set but never used
+p4_main.c(109): warning:  #177-D: variable "pushed" was declared but never referenced
 Target not created
 Build target 'Target 1'
 compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
 linking...
-Project4.axf: Error: L6218E: Undefined symbol rt_tsk_pass (referred from potentiometer.o).
-Target not created
-Build target 'Target 1'
-compiling potentiometer.c...
-potentiometer.c(23): warning:  #940-D: missing return statement at end of non-void function "potentiometer_read"
-linking...
-Program Size: Code=5256 RO-data=6700 RW-data=48 ZI-data=640  
+Program Size: Code=6406 RO-data=6558 RW-data=2196 ZI-data=8324  
 "Project4.axf" - 0 Error(s), 1 Warning(s).
 Load "N:\\MTE241\\Project4\\Project4.AXF" 
 Erase Done.
@@ -57,233 +74,18 @@ Programming Done.
 Verify OK.
 Build target 'Target 1'
 compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(113): error:  #18: expected a ")"
+p4_main.c(129): warning:  #12-D: parsing restarts here after previous syntax error
+p4_main.c(129): error:  #127: expected a statement
+p4_main.c(108): warning:  #177-D: variable "direction" was declared but never referenced
+p4_main.c(109): warning:  #177-D: variable "pushed" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=5272 RO-data=6796 RW-data=48 ZI-data=640  
-"Project4.axf" - 0 Error(s), 0 Warning(s).
-Load "N:\\MTE241\\Project4\\Project4.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Load "N:\\MTE241\\Project4\\Project4.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling p4_main.c...
-p4_main.c(80): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(80): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(82): error:  #65: expected a ";"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-p4_main.c(80): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(80): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-p4_main.c(80): error:  #98: an array may not have elements of this type
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-p4_main.c(80): error:  #98: an array may not have elements of this type
-p4_main.c(80): warning:  #520-D: initialization with "{...}" expected for aggregate object
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-linking...
-Program Size: Code=5300 RO-data=6624 RW-data=1072 ZI-data=640  
-"Project4.axf" - 0 Error(s), 0 Warning(s).
-Load "N:\\MTE241\\Project4\\Project4.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Load "N:\\MTE241\\Project4\\Project4.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling p4_main.c...
-linking...
-Program Size: Code=5300 RO-data=6624 RW-data=1072 ZI-data=640  
-"Project4.axf" - 0 Error(s), 0 Warning(s).
-Load "N:\\MTE241\\Project4\\Project4.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling p4_main.c...
-linking...
-Program Size: Code=5300 RO-data=6624 RW-data=1072 ZI-data=640  
-"Project4.axf" - 0 Error(s), 0 Warning(s).
-Load "N:\\MTE241\\Project4\\Project4.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling p4_main.c...
-p4_main.c(84): error:  #109: expression must have (pointer-to-) function type
-p4_main.c(84): error:  #29: expected an expression
-p4_main.c(84): error:  #165: too few arguments in function call
-p4_main.c(84): error:  #18: expected a ")"
-Target not created
-Load "N:\\MTE241\\Project4\\Project4.AXF" 
-_____^
-*** error 56: cannot open file
-Build target 'Target 1'
-compiling p4_main.c...
-p4_main.c(84): error:  #109: expression must have (pointer-to-) function type
-p4_main.c(84): error:  #29: expected an expression
-p4_main.c(84): error:  #165: too few arguments in function call
-p4_main.c(84): error:  #18: expected a ")"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-linking...
-Program Size: Code=5300 RO-data=6624 RW-data=1072 ZI-data=640  
-"Project4.axf" - 0 Error(s), 0 Warning(s).
-Load "N:\\MTE241\\Project4\\Project4.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling p4_main.c...
-linking...
-Program Size: Code=5300 RO-data=6624 RW-data=1072 ZI-data=640  
-"Project4.axf" - 0 Error(s), 0 Warning(s).
-Load "N:\\MTE241\\Project4\\Project4.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling p4_main.c...
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(53): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(54): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-p4_main.c(68): error:  #146: too many initializer values
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-linking...
-Program Size: Code=5300 RO-data=6624 RW-data=1672 ZI-data=640  
-"Project4.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling p4_main.c...
-p4_main.c(105): error:  #29: expected an expression
-p4_main.c(105): error:  #20: identifier "i" is undefined
-p4_main.c(106): error:  #29: expected an expression
-p4_main.c(106): error:  #20: identifier "j" is undefined
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-p4_main.c(105): error:  #29: expected an expression
-p4_main.c(105): error:  #65: expected a ";"
-p4_main.c(105): error:  #29: expected an expression
-p4_main.c(105): error:  #65: expected a ";"
-p4_main.c(106): error:  #29: expected an expression
-p4_main.c(106): error:  #65: expected a ";"
-p4_main.c(106): error:  #29: expected an expression
-p4_main.c(106): error:  #65: expected a ";"
-p4_main.c(107): error:  #20: identifier "i" is undefined
-p4_main.c(107): error:  #20: identifier "j" is undefined
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-p4_main.c(105): error:  #29: expected an expression
-p4_main.c(105): error:  #20: identifier "i" is undefined
-p4_main.c(106): error:  #29: expected an expression
-p4_main.c(106): error:  #20: identifier "j" is undefined
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-linking...
-Program Size: Code=5368 RO-data=6556 RW-data=1672 ZI-data=640  
-"Project4.axf" - 0 Error(s), 0 Warning(s).
-Load "N:\\MTE241\\Project4\\Project4.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Rebuild target 'Target 1'
-assembling startup_LPC17xx.s...
-compiling ece_spi.c...
-compiling GLCD_Scroll.c...
-compiling GLCD_SPI_LPC1700.c...
-compiling joystick.c...
-compiling led.c...
-compiling MPU9250.c...
-compiling potentiometer.c...
-potentiometer.c(23): warning:  #940-D: missing return statement at end of non-void function "potentiometer_read"
-compiling Retarget.c...
-compiling RTX_config.c...
-compiling sensor_fusion.c...
-compiling timer.c...
-compiling uart.c...
-compiling p4_main.c...
-compiling system_LPC17xx.c...
-linking...
-Program Size: Code=5368 RO-data=6556 RW-data=1672 ZI-data=640  
+Program Size: Code=6410 RO-data=6558 RW-data=2196 ZI-data=8324  
 "Project4.axf" - 0 Error(s), 1 Warning(s).
 Load "N:\\MTE241\\Project4\\Project4.AXF" 
 Erase Done.
@@ -291,33 +93,207 @@ Programming Done.
 Verify OK.
 Build target 'Target 1'
 compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=5368 RO-data=6556 RW-data=2184 ZI-data=640  
-"Project4.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-compiling p4_main.c...
-linking...
-Program Size: Code=5408 RO-data=6548 RW-data=2184 ZI-data=640  
-"Project4.axf" - 0 Error(s), 0 Warning(s).
+Program Size: Code=6410 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
 Load "N:\\MTE241\\Project4\\Project4.AXF" 
 Erase Done.
 Programming Done.
 Verify OK.
 Build target 'Target 1'
 compiling p4_main.c...
-p4_main.c(15): error:  #5: cannot open source input file "bitmap.c": No such file or directory
-compiling bitmaps.c...
-bitmaps.c(78): warning:  #1-D: last line of file ends without a newline
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6406 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6406 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6406 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6410 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(113): warning:  #226-D: invalid format string conversion
+linking...
+Program Size: Code=6132 RO-data=6560 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6630 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6630 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6410 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6410 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(114): error:  #18: expected a ")"
+p4_main.c(130): warning:  #12-D: parsing restarts here after previous syntax error
+p4_main.c(130): error:  #127: expected a statement
+p4_main.c(109): warning:  #177-D: variable "direction" was declared but never referenced
+p4_main.c(110): warning:  #177-D: variable "pushed" was declared but never referenced
 Target not created
 Build target 'Target 1'
 compiling p4_main.c...
-bitmaps.c(78): warning:  #1-D: last line of file ends without a newline
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
 linking...
-Project4.axf: Error: L6200E: Symbol bb multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bs multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bc multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol board multiply defined (by bitmaps.o and p4_main.o).
-Target not created
+Program Size: Code=6414 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6418 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(101): warning:  #177-D: variable "val" was declared but never referenced
+linking...
+Program Size: Code=6210 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(102): warning:  #177-D: variable "i" was declared but never referenced
+p4_main.c(103): warning:  #177-D: variable "test" was declared but never referenced
+linking...
+Program Size: Code=6422 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 3 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(101): warning:  #177-D: variable "val" was declared but never referenced
+linking...
+Program Size: Code=6210 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(101): warning:  #177-D: variable "val" was declared but never referenced
+linking...
+Program Size: Code=6210 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(102): warning:  #177-D: variable "i" was declared but never referenced
+p4_main.c(103): warning:  #177-D: variable "test" was declared but never referenced
+linking...
+Program Size: Code=6430 RO-data=6558 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 3 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6304 RO-data=6556 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling p4_main.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6308 RO-data=6556 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
 Rebuild target 'Target 1'
 assembling startup_LPC17xx.s...
 compiling ece_spi.c...
@@ -334,782 +310,93 @@ compiling sensor_fusion.c...
 compiling timer.c...
 compiling uart.c...
 compiling p4_main.c...
-bitmaps.c(78): warning:  #1-D: last line of file ends without a newline
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
 compiling bitmaps.c...
-bitmaps.c(78): warning:  #1-D: last line of file ends without a newline
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
 compiling system_LPC17xx.c...
 linking...
-Project4.axf: Error: L6200E: Symbol bb multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bs multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bc multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol board multiply defined (by bitmaps.o and p4_main.o).
-Target not created
+Program Size: Code=6308 RO-data=6556 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 3 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
 Build target 'Target 1'
 compiling p4_main.c...
-bitmaps.c(78): warning:  #1-D: last line of file ends without a newline
-p4_main.c(58): error:  #167: argument of type "unsigned short (*)[16]" is incompatible with parameter of type "unsigned char *"
-p4_main.c(60): error:  #167: argument of type "unsigned short (*)[16]" is incompatible with parameter of type "unsigned char *"
-p4_main.c(63): error:  #167: argument of type "unsigned short (*)[16]" is incompatible with parameter of type "unsigned char *"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(78): warning:  #1-D: last line of file ends without a newline
-p4_main.c(58): error:  #167: argument of type "unsigned short (*)[16]" is incompatible with parameter of type "unsigned char *"
-p4_main.c(60): error:  #167: argument of type "unsigned char (*)[16]" is incompatible with parameter of type "unsigned char *"
-p4_main.c(63): error:  #167: argument of type "unsigned short (*)[16]" is incompatible with parameter of type "unsigned char *"
-compiling bitmaps.c...
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(8): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(9): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(10): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(11): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(12): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(13): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(14): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(15): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(16): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(17): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(18): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(19): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(20): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(21): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(22): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(23): warning:  #69-D: integer conversion resulted in truncation
-bitmaps.c(78): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.c(78): warning:  #1-D: last line of file ends without a newline
-compiling bitmaps.c...
-bitmaps.c(78): warning:  #1-D: last line of file ends without a newline
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
 linking...
-Project4.axf: Error: L6200E: Symbol bb multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bs multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bc multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol board multiply defined (by bitmaps.o and p4_main.o).
-Target not created
+Program Size: Code=6212 RO-data=6556 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
 Build target 'Target 1'
 compiling p4_main.c...
-bitmaps.h(78): warning:  #1-D: last line of file ends without a newline
-compiling bitmaps.c...
-bitmaps.h(78): warning:  #1-D: last line of file ends without a newline
-bitmaps.c(9): error:  #148: variable "bb" has already been initialized
-bitmaps.c(26): error:  #148: variable "bs" has already been initialized
-bitmaps.c(43): error:  #148: variable "bc" has already been initialized
-bitmaps.c(60): error:  #148: variable "board" has already been initialized
-bitmaps.c(79): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling bitmaps.c...
-bitmaps.h(78): warning:  #1-D: last line of file ends without a newline
-bitmaps.c(81): warning:  #1-D: last line of file ends without a newline
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
 linking...
-Project4.axf: Error: L6200E: Symbol bb multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bs multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bc multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol board multiply defined (by bitmaps.o and p4_main.o).
-Target not created
-Rebuild target 'Target 1'
-assembling startup_LPC17xx.s...
-compiling ece_spi.c...
-compiling GLCD_Scroll.c...
-compiling GLCD_SPI_LPC1700.c...
-compiling joystick.c...
-compiling led.c...
-compiling MPU9250.c...
-compiling potentiometer.c...
-potentiometer.c(23): warning:  #940-D: missing return statement at end of non-void function "potentiometer_read"
-compiling Retarget.c...
-compiling RTX_config.c...
-compiling sensor_fusion.c...
-compiling timer.c...
-compiling uart.c...
+Program Size: Code=6204 RO-data=6556 RW-data=2196 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
 compiling p4_main.c...
-bitmaps.h(78): warning:  #1-D: last line of file ends without a newline
-compiling bitmaps.c...
-bitmaps.h(78): warning:  #1-D: last line of file ends without a newline
-bitmaps.c(81): warning:  #1-D: last line of file ends without a newline
-compiling system_LPC17xx.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(119): warning:  #111-D: statement is unreachable
 linking...
-Project4.axf: Error: L6200E: Symbol bb multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bs multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bc multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol board multiply defined (by bitmaps.o and p4_main.o).
-Target not created
+Program Size: Code=6228 RO-data=6556 RW-data=2204 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
 Build target 'Target 1'
 compiling p4_main.c...
-bitmaps.h(78): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char *"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(78): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned char"
-p4_main.c(60): error:  #167: argument of type "unsigned char" is incompatible with parameter of type "unsigned char *"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(78): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(60): error:  #167: argument of type "unsigned short" is incompatible with parameter of type "unsigned char *"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(78): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): warning:  #520-D: initialization with "{...}" expected for aggregate object
-p4_main.c(52): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-p4_main.c(60): error:  #167: argument of type "unsigned short (*)[16]" is incompatible with parameter of type "unsigned char *"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(78): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): warning:  #520-D: initialization with "{...}" expected for aggregate object
-p4_main.c(52): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(78): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(78): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): warning:  #520-D: initialization with "{...}" expected for aggregate object
-p4_main.c(52): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short *"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-compiling bitmaps.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(116): warning:  #223-D: function "abs" declared implicitly
+p4_main.c(120): warning:  #111-D: statement is unreachable
 linking...
-Project4.axf: Error: L6200E: Symbol bb multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bs multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bc multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol board multiply defined (by bitmaps.o and p4_main.o).
-Target not created
+Program Size: Code=6236 RO-data=6556 RW-data=2204 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 3 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
 Build target 'Target 1'
 compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): warning:  #520-D: initialization with "{...}" expected for aggregate object
-p4_main.c(52): error:  #144: a value of type "unsigned short (*)[16]" cannot be used to initialize an entity of type "unsigned short *"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): warning:  #520-D: initialization with "{...}" expected for aggregate object
-p4_main.c(52): error:  #144: a value of type "unsigned short (*)[16][16]" cannot be used to initialize an entity of type "unsigned short *"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): warning:  #520-D: initialization with "{...}" expected for aggregate object
-p4_main.c(52): error:  #144: a value of type "unsigned short (*)[16][16]" cannot be used to initialize an entity of type "unsigned short"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): error:  #40: expected an identifier
-p4_main.c(52): error:  #60: this operator is not allowed in an integral constant expression
-p4_main.c(52): error:  #17: expected a "]"
-p4_main.c(60): error:  #20: identifier "blockSolid" is undefined
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): error:  #40: expected an identifier
-p4_main.c(52): error:  #60: this operator is not allowed in an integral constant expression
-p4_main.c(52): error:  #20: identifier "blockSolid" is undefined
-p4_main.c(52): error:  #57: this operator is not allowed in a constant expression
-p4_main.c(52): error:  #60: this operator is not allowed in an integral constant expression
-p4_main.c(52): error:  #17: expected a "]"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): warning:  #520-D: initialization with "{...}" expected for aggregate object
-p4_main.c(52): error:  #144: a value of type "unsigned short (*)[16][16]" cannot be used to initialize an entity of type "unsigned short *"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-p4_main.c(52): error:  #144: a value of type "unsigned short (*)[16][16]" cannot be used to initialize an entity of type "unsigned short *"
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(116): warning:  #223-D: function "abs" declared implicitly
 linking...
-Project4.axf: Error: L6200E: Symbol bb multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bs multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bc multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol board multiply defined (by bitmaps.o and p4_main.o).
-Target not created
-Rebuild target 'Target 1'
-assembling startup_LPC17xx.s...
-compiling ece_spi.c...
-compiling GLCD_Scroll.c...
-compiling GLCD_SPI_LPC1700.c...
-compiling joystick.c...
-compiling led.c...
-compiling MPU9250.c...
-compiling potentiometer.c...
-potentiometer.c(23): warning:  #940-D: missing return statement at end of non-void function "potentiometer_read"
-compiling Retarget.c...
-compiling RTX_config.c...
-compiling sensor_fusion.c...
-compiling timer.c...
-compiling uart.c...
+Program Size: Code=6244 RO-data=6556 RW-data=2204 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
 compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-compiling bitmaps.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-compiling system_LPC17xx.c...
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
+p4_main.c(116): warning:  #223-D: function "abs" declared implicitly
 linking...
-Project4.axf: Error: L6200E: Symbol bb multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bs multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bc multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol board multiply defined (by bitmaps.o and p4_main.o).
-Target not created
+Program Size: Code=6244 RO-data=6556 RW-data=2204 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
 Build target 'Target 1'
 compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
+bitmaps.h(8): warning:  #1-D: last line of file ends without a newline
 linking...
-Project4.axf: Error: L6200E: Symbol bb multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bs multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol bc multiply defined (by bitmaps.o and p4_main.o).
-Project4.axf: Error: L6200E: Symbol board multiply defined (by bitmaps.o and p4_main.o).
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-p4_main.c(49): error:  #20: identifier "bs" is undefined
-p4_main.c(56): error:  #20: identifier "board" is undefined
-p4_main.c(59): error:  #20: identifier "bb" is undefined
-p4_main.c(62): error:  #20: identifier "bc" is undefined
-compiling bitmaps.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-compiling bitmaps.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-bitmaps.c(10): error:  #77-D: this declaration has no storage class or type specifier
-bitmaps.c(10): error:  #147: declaration is incompatible with "unsigned short bb[16][16]" (declared at line 4 of "bitmaps.h")
-bitmaps.c(27): error:  #77-D: this declaration has no storage class or type specifier
-bitmaps.c(27): error:  #147: declaration is incompatible with "unsigned short bs[16][16]" (declared at line 6 of "bitmaps.h")
-bitmaps.c(44): error:  #77-D: this declaration has no storage class or type specifier
-bitmaps.c(44): error:  #147: declaration is incompatible with "unsigned short bc[16][16]" (declared at line 8 of "bitmaps.h")
-bitmaps.c(61): error:  #77-D: this declaration has no storage class or type specifier
-bitmaps.c(61): error:  #147: declaration is incompatible with "unsigned short board[20][15]" (declared at line 10 of "bitmaps.h")
-Target not created
-Build target 'Target 1'
-compiling bitmaps.c...
-bitmaps.h(10): warning:  #1-D: last line of file ends without a newline
-bitmaps.c(10): error:  #77-D: this declaration has no storage class or type specifier
-bitmaps.c(10): error:  #147: declaration is incompatible with "unsigned short bb[16][16]" (declared at line 4 of "bitmaps.h")
-bitmaps.c(10): error:  #29: expected an expression
-bitmaps.c(11): error:  #67: expected a "}"
-bitmaps.c(25): warning:  #12-D: parsing restarts here after previous syntax error
-bitmaps.c(27): error:  #77-D: this declaration has no storage class or type specifier
-bitmaps.c(27): error:  #147: declaration is incompatible with "unsigned short bs[16][16]" (declared at line 6 of "bitmaps.h")
-bitmaps.c(44): error:  #77-D: this declaration has no storage class or type specifier
-bitmaps.c(44): error:  #147: declaration is incompatible with "unsigned short bc[16][16]" (declared at line 8 of "bitmaps.h")
-bitmaps.c(61): error:  #77-D: this declaration has no storage class or type specifier
-bitmaps.c(61): error:  #147: declaration is incompatible with "unsigned short board[20][15]" (declared at line 10 of "bitmaps.h")
-Target not created
+Program Size: Code=6240 RO-data=6556 RW-data=2204 ZI-data=8324  
+"Project4.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\MTE241\\Project4\\Project4.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
