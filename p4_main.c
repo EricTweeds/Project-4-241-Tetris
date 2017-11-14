@@ -79,35 +79,10 @@ __task void start_tasks(void){
 	//uncomment task function in potentionmeter.c
 }
 */
-void initializeGameBoard(void) {
-	//Initializes the GLCD screen to the default screen for the game
-	int i = 0, j = 0; // used in for loop later on
 
-	//pointers to 2d arrays intialized in bitmaps.h
-	unsigned short (*blockSolid)[16][16] = &bs; 
-	unsigned short (*blockBorder)[16][16] = &bb; 
-	unsigned short (*blockClear)[16][16] = &bc;  
-	
-	GLCD_Init();
-	GLCD_Clear(0x001F);
-	
-	//Cycle through gameboard array to set the inital value for each block
-	//The board is divided into 16x16 super pixels
-	for (i = 0; i < 20; i ++) {
-		for (j = 0; j < 15; j++) {
-			if (board[i][j] == 1) {
-				GLCD_Bitmap(16*j, 16*i, 16, 16, (unsigned char*)blockSolid);
-			} else if (board[i][j] == 2) {
-				GLCD_Bitmap(16*j, 16*i, 16, 16,(unsigned char*)blockBorder);
-			}
-			else {
-				GLCD_Bitmap(16*j, 16*i, 16, 16,(unsigned char*)blockClear);
-			}
-		}
-	}
-}
 
 int main(void) {
+	/*
 	LED_setup();
 	LED_display(3);
 	printf(" \n");
@@ -120,8 +95,22 @@ int main(void) {
 		}
 	oldPot=newPot;
 	}
-	
-	//initializeGameBoard(); 
+	*/
+	int spin = 0, i = 0;
+	spawnShape();
+	initializeGameBoard();
+	checkFullRows();
+	for (i = 0; i < 19; i++) {
+		for (spin = 0; spin < 17000000; spin ++);
+		downShift();
+		updateGameBoard();
+		if (i % 2 == 0){
+			rightShift();
+		} else {
+			leftShift();
+		}
+		updateGameBoard();
+	}
 	//os_sys_init(start_tasks);
 	//while(1);
 	

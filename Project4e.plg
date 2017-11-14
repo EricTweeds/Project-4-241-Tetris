@@ -8,17 +8,11 @@ Project File Date:  11/14/2017
 
 <h2>Output:</h2>
 Build target 'Target 1'
-compiling bitmaps.c...
 compiling p4_main.c...
-shapeController.h(4): warning:  #1-D: last line of file ends without a newline
-p4_main.c(18): error:  #169: expected a declaration
+shapeController.h(8): warning:  #1-D: last line of file ends without a newline
 compiling shapeController.c...
-shapeController.h(4): warning:  #1-D: last line of file ends without a newline
-shapeController.c(80): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling p4_main.c...
-shapeController.h(4): warning:  #1-D: last line of file ends without a newline
+shapeController.h(8): warning:  #1-D: last line of file ends without a newline
+shapeController.c(231): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=6584 RO-data=6556 RW-data=1688 ZI-data=8832  
-"Project4e.axf" - 0 Error(s), 1 Warning(s).
+Program Size: Code=6628 RO-data=6576 RW-data=1672 ZI-data=8832  
+"Project4e.axf" - 0 Error(s), 3 Warning(s).
