@@ -1,6 +1,6 @@
 Dependencies for Project 'Project4e', Target 'Target 1': (DO NOT MODIFY !)
 F (.\startup_LPC17xx.s)(0x5A0B34BF)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I c:\Software\Keil\ARM\RV31\INC -I c:\Software\Keil\ARM\CMSIS\Include -I c:\Software\Keil\ARM\Inc\NXP\LPC17xx --list "startup_LPC17xx.lst" --xref -o "startup_LPC17xx.o" --depend "startup_LPC17xx.d")
-F (.\bitmaps.c)(0x5A0B407B)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I c:\Software\Keil\ARM\RV31\INC -I c:\Software\Keil\ARM\CMSIS\Include -I c:\Software\Keil\ARM\Inc\NXP\LPC17xx -o "bitmaps.o" --omf_browse "bitmaps.crf" --depend "bitmaps.d")
+F (.\bitmaps.c)(0x5A0B40B4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I c:\Software\Keil\ARM\RV31\INC -I c:\Software\Keil\ARM\CMSIS\Include -I c:\Software\Keil\ARM\Inc\NXP\LPC17xx -o "bitmaps.o" --omf_browse "bitmaps.crf" --depend "bitmaps.d")
 I (GLCD.h)(0x5A0B3167)
 I (bitmaps.h)(0x5A0B3504)
 F (.\ece_spi.c)(0x5A0B3167)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I c:\Software\Keil\ARM\RV31\INC -I c:\Software\Keil\ARM\CMSIS\Include -I c:\Software\Keil\ARM\Inc\NXP\LPC17xx -o "ece_spi.o" --omf_browse "ece_spi.crf" --depend "ece_spi.d")
@@ -53,7 +53,7 @@ I (type.h)(0x5A0B3167)
 I (MPU9250.h)(0x5A0B3167)
 I (ece_spi.h)(0x5A0B3167)
 I (delay.h)(0x5A0B3167)
-F (.\p4_main.c)(0x5A0B3A48)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I c:\Software\Keil\ARM\RV31\INC -I c:\Software\Keil\ARM\CMSIS\Include -I c:\Software\Keil\ARM\Inc\NXP\LPC17xx -o "p4_main.o" --omf_browse "p4_main.crf" --depend "p4_main.d")
+F (.\p4_main.c)(0x5A0B61CC)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I c:\Software\Keil\ARM\RV31\INC -I c:\Software\Keil\ARM\CMSIS\Include -I c:\Software\Keil\ARM\Inc\NXP\LPC17xx -o "p4_main.o" --omf_browse "p4_main.crf" --depend "p4_main.d")
 I (c:\Software\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x4FF59B7C)
 I (c:\Software\Keil\ARM\CMSIS\Include\core_cm3.h)(0x5006C432)
 I (c:\Software\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB16D34)
@@ -70,7 +70,8 @@ I (timer.h)(0x5A0B3167)
 I (potentiometer.h)(0x5A0B3167)
 I (c:\Software\Keil\ARM\RV31\INC\RTL.h)(0x504DDBAC)
 I (bitmaps.h)(0x5A0B3504)
-I (shapeController.h)(0x5A0B39A5)
+I (shapeController.h)(0x5A0B40CC)
+I (c:\Software\Keil\ARM\ARMCC\bin\..\include\math.h)(0x4EB16D38)
 F (.\potentiometer.c)(0x5A0B3167)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I c:\Software\Keil\ARM\RV31\INC -I c:\Software\Keil\ARM\CMSIS\Include -I c:\Software\Keil\ARM\Inc\NXP\LPC17xx -o "potentiometer.o" --omf_browse "potentiometer.crf" --depend "potentiometer.d")
 I (c:\Software\Keil\ARM\Inc\NXP\LPC17xx\lpc17xx.h)(0x4FF59B7C)
 I (c:\Software\Keil\ARM\CMSIS\Include\core_cm3.h)(0x5006C432)
@@ -108,8 +109,8 @@ I (c:\Software\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x5059F73C)
 I (c:\Software\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x4FDB2F0C)
 I (c:\Software\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x4F58E032)
 I (uart.h)(0x5A0B3168)
-F (.\shapeController.c)(0x5A0B403E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I c:\Software\Keil\ARM\RV31\INC -I c:\Software\Keil\ARM\CMSIS\Include -I c:\Software\Keil\ARM\Inc\NXP\LPC17xx -o "shapecontroller.o" --omf_browse "shapecontroller.crf" --depend "shapecontroller.d")
-I (shapeController.h)(0x5A0B39A5)
+F (.\shapeController.c)(0x5A0B43C0)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I c:\Software\Keil\ARM\RV31\INC -I c:\Software\Keil\ARM\CMSIS\Include -I c:\Software\Keil\ARM\Inc\NXP\LPC17xx -o "shapecontroller.o" --omf_browse "shapecontroller.crf" --depend "shapecontroller.d")
+I (shapeController.h)(0x5A0B40CC)
 I (bitmaps.h)(0x5A0B3504)
 I (c:\Software\Keil\ARM\ARMCC\bin\..\include\stdlib.h)(0x4EB16D34)
 I (c:\Software\Keil\ARM\ARMCC\bin\..\include\stdbool.h)(0x4EB16D38)

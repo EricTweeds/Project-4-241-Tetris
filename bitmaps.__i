@@ -2,4 +2,4 @@
 -I c:\Software\Keil\ARM\RV31\INC 
 -I c:\Software\Keil\ARM\CMSIS\Include 
 -I c:\Software\Keil\ARM\Inc\NXP\LPC17xx 
--o "p4_main.o" --omf_browse "p4_main.crf" --depend "p4_main.d" "p4_main.c"
+-o "bitmaps.o" --omf_browse "bitmaps.crf" --depend "bitmaps.d" "bitmaps.c"

@@ -14,9 +14,8 @@
 #include <RTL.h>
 #include "bitmaps.h"
 #include "shapeController.h"
-
-=======
 #include <math.h>
+
 //globals
 uint32_t newPot =0;
 uint32_t oldPot =0;
