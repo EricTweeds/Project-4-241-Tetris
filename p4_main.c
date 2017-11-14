@@ -27,9 +27,37 @@ __task void spawnShape(void) {
 }
 __task void updateGameBoard(void) {
 	//Shifts the shape down and rotate or shift side to side if possible
+	//update score here after?
 }
 __task void readPeripherals(void) {
 	//reads potentiometer to rotate shape
+	uint32_t newPot=potentiometer_read();
+
+	//joystick read
+	uint32_t val=joystick_read();
+	unsigned char *direction = "NO DIR";
+	unsigned char *pushed = "Not Pressed";
+	if ((val & (1<<23)) == 0) {
+		direction="UP";
+	}
+	if ((val & (1<<24)) == 0) {
+		direction="RIGHT";
+	}
+	if ((val & (1<<25)) == 0) {
+		direction="DOWN";
+	}
+	if ((val & (1<<26)) == 0) {
+		direction="LEFT";
+	}
+	if ((val & (1<<20)) == 0) {
+		pushed = "Pressed";
+	}
+	
+	//Push button read
+	uint32_t val = LPC_GPIO2->FIOPIN;
+	if ((val & (1<<10)) == 0){
+	//drop block
+	}
 }
 
 __task void start_tasks(void){
@@ -71,10 +99,10 @@ void initializeGameBoard(void) {
 
 int main(void) {
 	initializeGameBoard();
-								
+	potentiometer_setup();
+	joystick_setup();
+	LED_setup();							
 	//os_sys_init(start_tasks);
-	
-	
-  
+	 
 	while(1);
 }
