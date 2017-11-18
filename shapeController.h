@@ -6,3 +6,4 @@ void initializeGameBoard(void);
 void updateGameBoard(void);
 void leftShift(void);
 void rightShift(void);
+void rotateRight(void);

@@ -97,19 +97,24 @@ int main(void) {
 	}
 	*/
 	int spin = 0, i = 0;
+	printf(" \n");
 	spawnShape();
 	initializeGameBoard();
 	checkFullRows();
-	for (i = 0; i < 19; i++) {
+	for (i = 0; i < 50; i++) {
 		for (spin = 0; spin < 17000000; spin ++);
 		downShift();
 		updateGameBoard();
 		if (i % 2 == 0){
-			rightShift();
+			rotateRight();
 		} else {
-			leftShift();
 		}
+		
 		updateGameBoard();
+		if (i == 21) {
+			spawnShape();
+		}
+		
 	}
 	//os_sys_init(start_tasks);
 	//while(1);
