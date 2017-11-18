@@ -15,9 +15,9 @@ void potentiometer_setup(void) {
 	                        (1<<21);      // enable ADC 
 }
 
-uint32_t potentiometer_read(void) {
+uint16_t potentiometer_read(void) {
 	LPC_ADC->ADCR |=  (1<<24);             // start A/D conversion     
 	while (!(LPC_ADC->ADGDR & (1u << 31))) // wait for conversion
-		//os_tsk_pass();                     // make sure other tasks can run
+		os_tsk_pass();                     // make sure other tasks can run
 	return (LPC_ADC->ADGDR >> 4) & 0xFFF;  // read and return 12-bit result
 }

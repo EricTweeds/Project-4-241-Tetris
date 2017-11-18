@@ -1,3 +1,5 @@
+extern int stopped;
+extern int cleared;
 void spawnShape(void);
 unsigned int checkSpawn(void);
 void downShift(void);

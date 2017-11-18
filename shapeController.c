@@ -4,12 +4,13 @@
 #include "stdbool.h"
 #include <stdio.h>
 #include "GLCD.h"
-int stopped = 0;
+extern int stopped = 0;
+extern int cleared = 0;
 void spawnShape(void) {
 	//Spawns a new shape into the spawning area
 	int shapeType = 0;
 	int rand(void);
-	//shapeType = rand()%7; 
+	shapeType = rand()%7; 
 	
 	if (checkSpawn() == 1) { //if there are no blocks in the spawn area
 		
@@ -20,40 +21,40 @@ void spawnShape(void) {
 			board[1][7] = 3;
 		}
 		else if (shapeType == 1) { //line tetrino
-			board[0][6] = 1;
-			board[0][7] = 1;
-			board[0][5] = 1;
-			board[0][8] = 1;
+			board[1][6] = 3;
+			board[1][7] = 3;
+			board[1][5] = 3;
+			board[1][8] = 3;
 		}
 		else if (shapeType == 2) { //L tetrino
-			board[1][7] = 1;
-			board[1][6] = 1;
-			board[0][8] = 1;
-			board[1][8] = 1;
+			board[1][7] = 3;
+			board[1][6] = 3;
+			board[0][8] = 3;
+			board[1][8] = 3;
 		}
 		else if (shapeType == 3) { //reverse L tetrino
-			board[1][6] = 1;
-			board[1][7] = 1;
-			board[1][8] = 1;
-			board[0][6] = 1;
+			board[1][6] = 3;
+			board[1][7] = 3;
+			board[1][8] = 3;
+			board[0][6] = 3;
 		}
 		else if (shapeType == 4) { //T tetrino
-			board[1][6] = 1;
-			board[1][7] = 1;
-			board[0][7] = 1;
-			board[1][8] = 1;
+			board[1][6] = 3;
+			board[1][7] = 3;
+			board[0][7] = 3;
+			board[1][8] = 3;
 		}
 		else if (shapeType == 5) { //zig left tetrino
-			board[0][6] = 1;
-			board[0][7] = 1;
-			board[1][7] = 1;
-			board[1][8] = 1;
+			board[0][6] = 3;
+			board[0][7] = 3;
+			board[1][7] = 3;
+			board[1][8] = 3;
 		}
 		else if (shapeType == 6) { //zig right tetrino
-			board[1][6] = 1;
-			board[0][7] = 1;
-			board[1][7] = 1;
-			board[0][8] = 1;
+			board[1][6] = 3;
+			board[0][7] = 3;
+			board[1][7] = 3;
+			board[0][8] = 3;
 		}
 	} else {
 		//Game over!
@@ -86,10 +87,11 @@ void downShift(void) {
 			for (j = 3; j < 12; j++) {
 				if (board[i][j] == 3) {
 					board[i][j] = 1;
+					stopped = 1;
 				}
 			}
 		}
-	}		
+	}	
 }
 void leftShift(void) {
 //shift the active shape left
@@ -111,7 +113,7 @@ void leftShift(void) {
 				}
 			}
 		}
-	}	
+	}
 }
 
 void rightShift(void) {
@@ -158,6 +160,7 @@ void checkFullRows(void) {
 				board[i+1][j] = board[i][j];
 				board[i][j] = 0;
 			}
+			cleared =1;
 		}
 		
 	}
@@ -169,7 +172,7 @@ unsigned int checkSpawn(void) {
 	unsigned int clear = 1;
 	for (j = 3; j < 12; j++) {
 		for (i = 0; i < 2; i++) {
-			if (board[i][j] == 1) {
+			if (board[i][j] == 1 || board[i][j] == 3) {
 				clear = 0;
 			}
 		}
