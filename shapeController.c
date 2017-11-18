@@ -4,14 +4,16 @@
 #include "stdbool.h"
 #include <stdio.h>
 #include "GLCD.h"
-int stopped = 0;
+
 int shapeType = 1;
+extern int stopped = 0;
+extern int cleared = 0;
 void spawnShape(void) {
 	//Spawns a new shape into the spawning area
 	
 	int rand(void);
-	//shapeType = rand()%7; 
-	shapeType = 3;
+	shapeType = rand()%7; 
+
 	if (checkSpawn() == 1) { //if there are no blocks in the spawn area
 		
 		if (shapeType == 0) { //square tetrino
@@ -86,12 +88,13 @@ void downShift(void) {
 					if ((i - k) >= 0) {
 						if (board[i - k][j] == 3) {
 							board[i - k][j] = 1;
+              stopped = 1;
 						}
 					}
 				}
 			}
 		}
-	}		
+	}	
 }
 void leftShift(void) {
 //shift the active shape left
@@ -113,7 +116,7 @@ void leftShift(void) {
 				}
 			}
 		}
-	}	
+	}
 }
 
 void rightShift(void) {
@@ -424,6 +427,7 @@ void checkFullRows(void) {
 				board[i+1][j] = board[i][j];
 				board[i][j] = 0;
 			}
+			cleared =1;
 		}
 		
 	}
@@ -435,7 +439,7 @@ unsigned int checkSpawn(void) {
 	unsigned int clear = 1;
 	for (j = 3; j < 12; j++) {
 		for (i = 0; i < 2; i++) {
-			if (board[i][j] == 1) {
+			if (board[i][j] == 1 || board[i][j] == 3) {
 				clear = 0;
 			}
 		}
