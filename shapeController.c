@@ -197,13 +197,40 @@ void rotateRight(void) {
 		}
 	}
 	else if (shapeType == 4) {
-		shapeType = 14;
+		if (board[corneri - 1][cornerj] != 0 || board[corneri][cornerj + 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri + 1][cornerj + 1] = 0;
+			board[corneri + 1][cornerj - 1] = 0;
+			board[corneri - 1][cornerj] = 3;
+			board[corneri][cornerj + 1] = 3;
+			shapeType = 14;
+		}
 	}
 	else if (shapeType == 5) {
-		shapeType = 17;
+		if (board[corneri + 2][cornerj + 1] != 0 || board[corneri][cornerj + 2] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri][cornerj + 1] = 0;
+			board[corneri + 2][cornerj + 1] = 3;
+			board[corneri][cornerj + 2] = 3;
+			shapeType = 17;
+		}
 	}
 	else if (shapeType == 6) {
-		shapeType = 18;
+		if (board[corneri - 1][cornerj] != 0 || board[corneri + 1][cornerj + 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri + 1][cornerj] = 0;
+			board[corneri + 1][cornerj - 1] = 0;
+			board[corneri - 1][cornerj] = 3;
+			board[corneri + 1][cornerj + 1] = 3;
+			shapeType = 18;
+		}
 	}
 	else if (shapeType == 7) {
 		for (j = 1; j < 4; j++) {
@@ -294,19 +321,64 @@ void rotateRight(void) {
 		}
 	}
 	else if (shapeType == 14) {
-		shapeType = 15;
+		if (board[corneri + 1][cornerj + 2] != 0 || board[corneri + 2][cornerj + 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri + 2][cornerj] = 0;
+			board[corneri + 1][cornerj + 2] = 3;
+			board[corneri + 2][cornerj + 1] = 3;
+			shapeType = 15;
+		}
 	}
 	else if (shapeType == 15) {
-		shapeType = 16;
+		if (board[corneri - 1][cornerj + 2] != 0 || board[corneri + 1][cornerj + 2] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri + 1][cornerj + 1] = 0;
+			board[corneri - 1][cornerj + 2] = 3;
+			board[corneri + 1][cornerj + 2] = 3;
+			shapeType = 16;
+		}
 	}
 	else if (shapeType == 16) {
-		shapeType = 4;
+		if (board[corneri + 2][cornerj - 1] != 0 || board[corneri + 2][cornerj + 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri + 1][cornerj - 1] = 0;
+			board[corneri + 2][cornerj - 1] = 3;
+			board[corneri + 2][cornerj + 1] = 3;
+			shapeType = 4;
+		}
 	}
 	else if (shapeType == 17) {
-		shapeType = 5;
+		if (board[corneri][cornerj - 1] != 0 || board[corneri][cornerj - 2] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri + 2][cornerj - 1] = 0;
+			board[corneri][cornerj - 1] = 3;
+			board[corneri][cornerj + 1] = 3;
+			shapeType = 5;
+		}
 	}
 	else if (shapeType == 18) {
-		shapeType = 6;
+		if (board[corneri + 2][cornerj] != 0 || board[corneri + 2][cornerj - 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri + 2][cornerj + 1] = 0;
+			board[corneri + 2][cornerj] = 3;
+			board[corneri + 2][cornerj - 1] = 3;
+			shapeType = 6;
+		}
 	}
 	
 	
@@ -402,7 +474,238 @@ void rotateRight(void) {
 
 void rotateLeft(void) {
 	//Rotates the active shape 90deg to the left
-	
+		int corneri = 0, cornerj = 0, i, j, valid = 1;
+	for (i = 0; i < 19; i++) {
+		for (j = 3; j < 12; j++) {
+			if (board[i][j] == 3) {
+				corneri = i;
+				cornerj = j;
+				i = 20;
+				break;
+			}
+		}
+	}
+	if (shapeType == 0); //do nothing
+	if (shapeType == 1) {
+		for (i = 1; i< 4; i++) {
+			if (board[corneri + i][cornerj] != 0) {
+				valid = 0;
+			}
+		}
+		if (valid == 1) {
+			for (j = 1; j < 4; j ++) {
+				board[corneri][cornerj + j] = 0;
+			}
+			for (i = 1; i < 4; i++) {
+				board[corneri + i][cornerj] = 3;
+			}
+			shapeType = 7;
+		}
+	}
+	else if (shapeType == 2) {
+		if (board[corneri - 1][cornerj] != 0 || board[corneri - 1][cornerj - 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri + 1][cornerj - 1] = 0;
+			board[corneri + 1] [cornerj - 2] = 0;
+			board[corneri - 1][cornerj] = 3;
+			board[corneri - 1][cornerj - 1] = 3;
+			shapeType = 9;
+		}
+	}
+	else if (shapeType == 3) {
+		if (board[corneri][cornerj + 2] != 0 || board[corneri - 1][cornerj + 2] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri + 1] [cornerj] = 0;
+			board[corneri][cornerj + 2] = 3;
+			board[corneri - 1][cornerj + 2] = 3;
+			shapeType = 11;
+		}
+	}
+	else if (shapeType == 4) {
+		if (board[corneri + 2][cornerj] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri + 1][cornerj + 1] = 0;
+			board[corneri + 2][cornerj] = 3;
+			shapeType = 16;
+		}
+	}
+	else if (shapeType == 5) {
+		if (board[corneri + 2][cornerj + 1] != 0 || board[corneri][cornerj + 2] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri][cornerj + 1] = 0;
+			board[corneri + 2][cornerj + 1] = 3;
+			board[corneri][cornerj + 2] = 3;
+			shapeType = 17;
+		}
+	}
+	else if (shapeType == 6) {
+		if (board[corneri - 1][cornerj] != 0 || board[corneri + 1][cornerj + 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri + 1][cornerj] = 0;
+			board[corneri + 1][cornerj - 1] = 0;
+			board[corneri - 1][cornerj] = 3;
+			board[corneri + 1][cornerj + 1] = 3;
+			shapeType = 18;
+		}
+	}
+	else if (shapeType == 7) {
+		for (j = 1; j < 4; j++) {
+			if (board[corneri][cornerj + j] != 0) {
+				valid = 0;
+			}
+		}
+		if (valid == 1) {
+			for (i = 1; i < 4; i ++) {
+				board[corneri + i][cornerj] = 0;
+			}
+			for (j = 1; j < 4; j++) {
+				board[corneri][cornerj + j] = 3;
+			}
+			shapeType = 1;
+		}
+	}
+	else if (shapeType == 8) {
+		if (board[corneri + 2][cornerj] != 0 || board[corneri + 2][cornerj + 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri + 1][cornerj] = 0;
+			board[corneri + 2][cornerj] = 0;
+			board[corneri + 2][cornerj] = 3;
+			board[corneri + 2][cornerj + 1] = 3;
+			shapeType = 10;
+		}
+
+	}
+	else if (shapeType == 9) {
+		if (board[corneri][cornerj - 1] != 0 || board[corneri + 1][cornerj - 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri + 1][cornerj + 1] = 0;
+			board[corneri + 2][cornerj + 1] = 0;
+			board[corneri][cornerj - 1] = 3;
+			board[corneri + 1][cornerj - 1] = 3;
+			shapeType = 8;
+		}
+
+	}
+	else if (shapeType == 10) {
+		if (board[corneri + 1][cornerj + 2] != 0 || board[corneri + 2][cornerj + 2] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri + 1][cornerj] = 0;
+			board[corneri + 1][cornerj + 2] = 3;
+			board[corneri + 2][cornerj + 2] = 3;
+			shapeType = 2;
+		}
+	}
+	else if (shapeType == 11) {
+		if (board[corneri][cornerj - 1] != 0 || board[corneri][cornerj - 2] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri + 2][cornerj] = 0;
+			board[corneri + 2][cornerj - 1] = 0;
+			board[corneri][cornerj - 1] = 3;
+			board[corneri][cornerj - 2] = 3;
+			shapeType = 13;
+		}
+	}
+	else if (shapeType == 12) {
+		if (board[corneri + 2][cornerj + 1] != 0 || board[corneri + 2][cornerj + 2] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri][cornerj + 1] = 0;
+			board[corneri + 2][cornerj + 1] = 3;
+			board[corneri + 2][cornerj + 2] = 3;
+			shapeType = 3;
+		}
+
+	}
+	else if (shapeType == 13) {
+		if (board[corneri + 1][cornerj] != 0 || board[corneri + 2][cornerj] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj + 2] = 0;
+			board[corneri + 1][cornerj + 2] = 0;
+			board[corneri + 1][cornerj] = 3;
+			board[corneri + 2][cornerj] = 3;
+			shapeType = 12;
+		}
+
+	}
+	else if (shapeType == 14) {
+		if (board[corneri + 1][cornerj - 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri + 2][cornerj] = 0;
+			board[corneri + 1][cornerj - 1] = 3;
+			shapeType = 4;
+		}
+	}
+	else if (shapeType == 15) {
+		if (board[corneri - 1][cornerj + 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri - 1][cornerj + 1] = 3;
+			shapeType = 14;
+		}
+	}
+	else if (shapeType == 16) {
+		if (board[corneri + 1][cornerj + 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri + 1][cornerj + 1] = 3;
+			shapeType = 5;
+		}
+	}
+	else if (shapeType == 17) {
+		if (board[corneri][cornerj - 1] != 0 || board[corneri][cornerj - 2] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri + 2][cornerj - 1] = 0;
+			board[corneri][cornerj - 1] = 3;
+			board[corneri][cornerj + 1] = 3;
+			shapeType = 5;
+		}
+	}
+	else if (shapeType == 18) {
+		if (board[corneri + 2][cornerj] != 0 || board[corneri + 2][cornerj - 1] != 0) {
+			valid = 0;
+		}
+		if (valid == 1) {
+			board[corneri][cornerj] = 0;
+			board[corneri + 2][cornerj + 1] = 0;
+			board[corneri + 2][cornerj] = 3;
+			board[corneri + 2][cornerj - 1] = 3;
+			shapeType = 6;
+		}
+	}
 }
 
 void checkFullRows(void) {
