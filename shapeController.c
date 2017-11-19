@@ -8,12 +8,12 @@
 int shapeType = 1;
 extern int stopped = 0;
 extern int cleared = 0;
+extern int score = 0;
 void spawnShape(void) {
 	//Spawns a new shape into the spawning area
-	
+	int i, j;
 	int rand(void);
-	shapeType = rand()%7; 
-
+	shapeType = (rand()) % 7; 
 	if (checkSpawn() == 1) { //if there are no blocks in the spawn area
 		
 		if (shapeType == 0) { //square tetrino
@@ -59,7 +59,11 @@ void spawnShape(void) {
 			board[0][8] = 3;
 		}
 	} else {
-		//Game over!
+		for (i = 19; i >= 0; i--) {
+			for (j = 0; j < 15; j++) {
+				board[i][j] = end[i][j];
+			}
+		}
 	}
 }
 void downShift(void) {
@@ -364,7 +368,7 @@ void rotateRight(void) {
 			board[corneri][cornerj] = 0;
 			board[corneri + 2][cornerj - 1] = 0;
 			board[corneri][cornerj - 1] = 3;
-			board[corneri][cornerj + 1] = 3;
+			board[corneri][cornerj - 2] = 3;
 			shapeType = 5;
 		}
 	}
@@ -469,7 +473,6 @@ void rotateRight(void) {
 		}
 	}
 	*/
-	
 }
 
 void rotateLeft(void) {
@@ -581,8 +584,8 @@ void rotateLeft(void) {
 			valid = 0;
 		}
 		if (valid == 1) {
-			board[corneri + 1][cornerj] = 0;
-			board[corneri + 2][cornerj] = 0;
+			board[corneri][cornerj + 1] = 0;
+			board[corneri][cornerj + 2] = 0;
 			board[corneri + 2][cornerj] = 3;
 			board[corneri + 2][cornerj + 1] = 3;
 			shapeType = 10;
@@ -679,7 +682,7 @@ void rotateLeft(void) {
 		if (valid == 1) {
 			board[corneri][cornerj] = 0;
 			board[corneri + 1][cornerj + 1] = 3;
-			shapeType = 5;
+			shapeType = 15;
 		}
 	}
 	else if (shapeType == 17) {
@@ -690,7 +693,7 @@ void rotateLeft(void) {
 			board[corneri][cornerj] = 0;
 			board[corneri + 2][cornerj - 1] = 0;
 			board[corneri][cornerj - 1] = 3;
-			board[corneri][cornerj + 1] = 3;
+			board[corneri][cornerj - 2] = 3;
 			shapeType = 5;
 		}
 	}
@@ -722,8 +725,8 @@ void checkFullRows(void) {
 			if (count == 9) {
 				for (j = 3; j < 12; j++) {
 					board[i][j] = 0;
-					//Increment score
 				}
+				score ++;
 			}
 		} else {
 			for (j = 3; j < 12; j++) {
@@ -785,8 +788,9 @@ void updateGameBoard(void) {
 	unsigned short (*blockSolid)[16][16] = &bs; 
 	unsigned short (*blockBorder)[16][16] = &bb; 
 	unsigned short (*blockClear)[16][16] = &bc;  
+	unsigned short (*blockRed)[16][16] = &red; 
 	for (i = 0; i < 20; i ++) {
-		for (j = 3; j < 12; j++) {
+		for (j = 0; j < 15; j++) {
 			if (board[i][j] == 1) {
 				GLCD_Bitmap(16*j, 16*i, 16, 16, (unsigned char*)blockSolid);
 			} else if (board[i][j] == 2) {
@@ -795,8 +799,11 @@ void updateGameBoard(void) {
 			else if (board[i][j] == 3) {
 				GLCD_Bitmap(16*j, 16*i, 16, 16,(unsigned char*)blockSolid);
 			}
-			else {
+			else if (board[i][j] == 0) {
 				GLCD_Bitmap(16*j, 16*i, 16, 16,(unsigned char*)blockClear);
+			}
+			else {
+				GLCD_Bitmap(16*j, 16*i, 16, 16,(unsigned char*)blockRed);
 			}
 		}
 	}
